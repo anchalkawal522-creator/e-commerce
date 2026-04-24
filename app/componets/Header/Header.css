@@ -1,0 +1,39 @@
+.top-header {
+  background-color: #0a5c36;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 40px;
+  font-size: 14px;
+  align-items: center;
+}
+
+/* LEFT */
+.top-header .left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* CENTER */
+.top-header .center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-header .center a {
+  color: white;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.top-header .divider {
+  opacity: 0.7;
+}
+
+/* RIGHT */
+.top-header .right {
+  display: flex;
+  gap: 20px;
+}

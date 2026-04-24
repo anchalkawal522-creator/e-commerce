@@ -1,0 +1,92 @@
+.deals {
+  padding: 40px;
+  background: #f5f5f5;
+}
+
+.deals-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.deals-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    display: grid;
+    border-bottom: 6px solid black;
+}
+
+/* CARD */
+.deal-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+/* IMAGE */
+.deal-img {
+  position: relative;
+  background: #eee;
+  border-radius: 15px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deal-img img {
+    max-width: 326px;
+   
+}
+/* HEART ICON */
+.wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* CONTENT */
+.deal-content {
+  margin-top: 15px;
+}
+
+.deal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deal-header h3 {
+  font-size: 18px;
+}
+
+.deal-header span {
+  font-weight: bold;
+}
+
+/* DESC */
+.deal-desc {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* RATING */
+.rating {
+  color: green;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.cart-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 1px solid black;
+  background: transparent;
+  cursor: pointer;
+}

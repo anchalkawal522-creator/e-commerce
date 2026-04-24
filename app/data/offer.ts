@@ -1,0 +1,38 @@
+export const offers = [
+  {
+    id: 1,
+    title: "Save",
+    amount: 100,
+    description: "Explore Our Furniture & Home Furnishing Range",
+    bgColor: "#d6c8bb",
+    textColor: "#c69214",
+    image: "/images/offer.1.png",
+  },
+  {
+    id: 2,
+    title: "Save",
+    amount: 29,
+    description: "Explore Our Furniture & Home Furnishing Range",
+    bgColor: "#e2c3c3",
+    textColor: "#a02121",
+   image: "/images/offer.2.png",
+  },
+  {
+    id: 3,
+    title: "Save",
+    amount: 67,
+    description: "Explore Our Furniture & Home Furnishing Range",
+    bgColor: "#d8c8b8",
+    textColor: "#9b6b3f",
+    image: "/images/offer.3.png",
+  },
+  {
+    id: 4,
+    title: "Save",
+    amount: 59,
+    description: "Explore Our Furniture & Home Furnishing Range",
+    bgColor: "#b9d9d2",
+    textColor: "#0a4d3c",
+    image: "/images/offer.4.png",
+  },
+];

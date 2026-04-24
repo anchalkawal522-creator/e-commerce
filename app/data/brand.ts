@@ -1,0 +1,58 @@
+export const brands = [
+  {
+    id: 1,
+    name: "Staples",
+    desc: "Delivery with in 24 hours",
+    logo: "/images/1b.png",
+    color: "#e60000",
+  },
+  {
+    id: 2,
+    name: "Sprouts",
+    desc: "Delivery with in 24 hours",
+    logo: "/images/2b.png",
+    color: "#1f7a3f",
+  },
+  {
+    id: 3,
+    name: "Grocery outlet",
+    desc: "Delivery with in 24 hours",
+    logo: "/images/3b.png",
+    color: "#c21833",
+  },
+  {
+    id: 4,
+    name: "Mollie stones",
+    desc: "Delivery with in 24 hours",
+    logo: "/images/4b.png",
+    color: "#000",
+  },
+  {
+    id: 5,
+    name: "Sports Basement",
+    desc: "Delivery with in 24 hours",
+    logo: "/images/5b.png",
+    color: "#2e8b57",
+  },
+  {
+    id: 6,
+    name: "Container Store",
+    desc: "Delivery with in 24 hours",
+    logo: "/images/6b.png",
+    color: "#1e5aa8",
+  },
+  {
+    id: 7,
+    name: "Target",
+    desc: "Delivery with in 24 hours",
+    logo: "/images/7b.png",
+    color: "#ff0000",
+  },
+  {
+    id: 8,
+    name: "Bevmo!",
+    desc: "Delivery with in 24 hours",
+    logo: "/images/8b.png",
+    color: "#d32f2f",
+  },
+];

@@ -1,0 +1,83 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #f4f4f4;
+}
+
+/* LOGO */
+.logo img {
+    height: 100%;
+    width: 100%;
+}
+.logo-link img {
+    width: 100%;
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  gap: 25px;
+  font-size: 15px;
+  color: #333;
+}
+
+.menu span {
+  cursor: pointer;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+/* SEARCH */
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 326px;
+    padding: 8px 35px 8px 15px;
+
+}
+.search-icon {
+    color: #555;
+    position: absolute;
+    top: 30%;
+    right: 26px;
+}
+
+/* ACTIONS */
+.actions {
+  display: flex;
+  gap: 20px;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.icon-link svg {
+  font-size: 18px;
+}
