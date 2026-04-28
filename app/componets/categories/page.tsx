@@ -5,14 +5,14 @@ import "./cate.css";
 
 export default function Categories() {
   return (
-    <div className="categories">
-      <h2 className="heading">Shop Our Top Categories</h2>
+    <div className="category-section">
+      <h2 className="category-heading">Shop Our Top Categories</h2>
 
-      <div className="grid">
+      <div className="category-grid">
         {categories.map((item) => (
           <div
             key={item.id}
-            className="card"
+            className="category-card"
             style={{ background: item.color }}
           >
             <img src={item.image} alt={item.title} />

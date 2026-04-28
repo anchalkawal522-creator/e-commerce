@@ -7,6 +7,7 @@ import Brand from "./componets/Brand/page";
 import Offers from "./componets/Offers/page";
 import Popular from "./componets/Popular/page";
 import Offerbanner from "./componets/offerbanner/page";
+import Best from "./componets/Best/page"
 export default function Home() {
   return (
     <div>
@@ -17,6 +18,7 @@ export default function Home() {
       <Offers />
       <Popular />
       <Offerbanner />
+      <Best />
     </div>
   );
 }

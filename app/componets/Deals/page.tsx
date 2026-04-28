@@ -1,9 +1,17 @@
 "use client";
-
 import { products } from "../../data/deals";
 import "./deals.css";
-
+import { useCart } from "../../Context/cartContext";
+import { useRouter } from "next/navigation";
 export default function Deals() {
+  const { addToCart } = useCart();
+
+  const router = useRouter();
+   const handleAdd = () => {
+  addToCart(item);
+  router.push("/checkout"); 
+};
+
   return (
     <div className="deals">
       <h2 className="deals-title">Todays Best Deals For You!</h2>
@@ -12,13 +20,11 @@ export default function Deals() {
         {products.map((item) => (
           <div key={item.id} className="deal-card">
             
-            {/* IMAGE */}
             <div className="deal-img">
               <img src={item.image} alt={item.title} />
               <div className="wishlist">♡</div>
             </div>
 
-            {/* CONTENT */}
             <div className="deal-content">
               <div className="deal-header">
                 <h3>{item.title}</h3>
@@ -27,15 +33,19 @@ export default function Deals() {
 
               <p className="deal-desc">{item.desc}</p>
 
-              {/* RATING */}
               <div className="rating">
                 {"★".repeat(item.rating)}
                 <span> ({item.reviews})</span>
               </div>
 
-              <button className="cart-btn">Add to Cart</button>
-            </div>
+              <button
+  className="cart-btn"
+  onClick={() => addToCart(item)}
+>
+  Add to Cart
+</button>
 
+            </div>
           </div>
         ))}
       </div>
