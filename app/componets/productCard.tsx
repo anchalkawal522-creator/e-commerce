@@ -1,6 +1,8 @@
 "use client";
-
+import { useRouter } from "next/navigation";
+import { useCart } from "../Context/cartContext";
 type Product = {
+
   id: number;
   title: string;
   price: number;
@@ -15,6 +17,16 @@ type ProductCardProps = {
 };
 
 export default function ProductCard({ product }: ProductCardProps) {
+   
+  const { addToCart } = useCart();
+    const router= useRouter();
+  
+    const handleAdd = (product: any) => {
+      addToCart(product);
+          setTimeout(() => {
+        router.push(`cart`);
+      }, 200);
+    };
   return (
     <div className="card">
       <div className="img-box">
@@ -30,7 +42,12 @@ export default function ProductCard({ product }: ProductCardProps) {
           <span> ({product.reviewCount || 0})</span>
         </div>
 
-        <button className="cart-btn">Add to Cart</button>
+        <button
+                className="cart-btn"
+                onClick={() => handleAdd(product)}
+              >
+                Add to Cart
+              </button>
       </div>
     </div>
   );

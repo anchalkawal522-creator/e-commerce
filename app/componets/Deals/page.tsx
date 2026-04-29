@@ -1,23 +1,27 @@
 "use client";
+
 import { products } from "../../data/deals";
 import "./deals.css";
 import { useCart } from "../../Context/cartContext";
 import { useRouter } from "next/navigation";
+
 export default function Deals() {
   const { addToCart } = useCart();
+  const router= useRouter();
 
-  const router = useRouter();
-   const handleAdd = () => {
-  addToCart(item);
-  router.push("/checkout"); 
-};
+  const handleAdd = (item: any) => {
+    addToCart(item);
+        setTimeout(() => {
+      router.push(`cart`);
+    }, 200);
+  };
 
   return (
     <div className="deals">
-      <h2 className="deals-title">Todays Best Deals For You!</h2>
+      <h2 className="deals-title">Today's Best Deals For You!</h2>
 
       <div className="deals-grid">
-        {products.map((item) => (
+        {products?.map((item) => (
           <div key={item.id} className="deal-card">
             
             <div className="deal-img">
@@ -39,11 +43,11 @@ export default function Deals() {
               </div>
 
               <button
-  className="cart-btn"
-  onClick={() => addToCart(item)}
->
-  Add to Cart
-</button>
+                className="cart-btn"
+                onClick={() => handleAdd(item)}
+              >
+                Add to Cart
+              </button>
 
             </div>
           </div>

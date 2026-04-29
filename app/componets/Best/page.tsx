@@ -38,7 +38,7 @@ export default function Page() {
     onClick={() => setSelectedCategory(category.name)}
     className={selectedCategory === category.name ? "active" : ""}
   >
-    {category.name} ✅
+    {category.name} 
   </button>
 ))}
       </div>

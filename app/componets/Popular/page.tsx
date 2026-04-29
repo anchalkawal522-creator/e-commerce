@@ -2,8 +2,20 @@
 
 import { pop } from "../../data/pop";
 import "./pop.css";
+import { useRouter } from "next/navigation";
+import { useCart } from "../../Context/cartContext";
 
 export default function Pop() {
+      const { addToCart } = useCart();
+   const router= useRouter();
+  
+    const handleAdd = (item: any) => {
+      addToCart(item);
+          setTimeout(() => {
+        router.push(`cart`);
+      }, 200);
+  
+    };
   return (
     <div className="pop">
       <h2 className="pop-title">Weekly Popular Products</h2>
@@ -33,7 +45,12 @@ export default function Pop() {
                 <span> ({item.reviews})</span>
               </div>
 
-              <button className="cart-btn">Add to Cart</button>
+              <button
+                className="cart-btn"
+                onClick={() => handleAdd(item)}
+              >
+                Add to Cart
+              </button>
             </div>
 
           </div>

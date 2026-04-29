@@ -8,6 +8,7 @@ import {
   ReactNode,
 } from "react";
 
+
 // 🔹 Product type
 type Product = {
   id: number;
@@ -126,5 +127,7 @@ export const useCart = () => {
   if (!context) {
     throw new Error("useCart must be used inside CartProvider");
   }
+
   return context;
+
 };

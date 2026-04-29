@@ -30,9 +30,8 @@
   background: #fafafa;
 }
 
-/* Product image */
 .cart-item img {
-  border-radius: 8px;
+    width: 49%;
 }
 
 /* Content section */
