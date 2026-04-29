@@ -6,7 +6,7 @@ export const navLinks = [
   },
   {
     name: "Deals",
-    href: "/deals",
+    href: "../componets/Deals",
   },
   {
     name: "What’s New",

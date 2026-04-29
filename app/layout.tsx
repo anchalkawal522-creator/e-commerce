@@ -5,6 +5,7 @@ import Navbar from "./componets/Navbar/Navbar";
 import { usePathname } from "next/navigation";
 import Footer from "./componets/Footer/page";
 import { CartProvider } from "./Context/cartContext"; 
+import { SearchProvider } from "./Context/searchContext";
 
  export default function RootLayout({
   children,
@@ -22,13 +23,16 @@ import { CartProvider } from "./Context/cartContext";
   <body className="min-h-full flex flex-col">
     
       <CartProvider>
+      <SearchProvider>
       {!hideLayout && <Header />}
       {!hideLayout && <Navbar />}
 
       {children}
 
       {!hideLayout && <Footer />}
+      </SearchProvider>
       </CartProvider>
+
   </body>
 </html>
 );
