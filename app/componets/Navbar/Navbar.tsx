@@ -66,12 +66,13 @@ export default function Navbar() {
     setSuggestions(filtered.slice(0, 5));
   }, [search]);
 
-  // ✅ Redirect to product page
   const handleSelect = (item: any) => {
-    setSearch(item.title);
-    setSuggestions([]);
-    router.push(`/product/${item.id}`); // ✅ exact product
-  };
+  setSearch(item.title);
+  setSuggestions([]);
+
+  // ✅ Redirect with query
+  router.push(`/product/${item.id}?add=true`);
+};
 
   return (
     <nav className="navbar">
