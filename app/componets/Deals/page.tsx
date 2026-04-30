@@ -3,15 +3,17 @@
 import { products } from "../../data/deals";
 import "./deals.css";
 import { useCart } from "../../Context/cartContext";
+import { useWishlist } from "../../Context/wishlistContext"; // ✅ added
 import { useRouter } from "next/navigation";
 
 export default function Deals() {
   const { addToCart } = useCart();
-  const router= useRouter();
+  const { addToWishlist, wishlist } = useWishlist(); // ✅ added
+  const router = useRouter();
 
   const handleAdd = (item: any) => {
     addToCart(item);
-        setTimeout(() => {
+    setTimeout(() => {
       router.push(`cart`);
     }, 200);
   };
@@ -24,9 +26,19 @@ export default function Deals() {
         {products?.map((item) => (
           <div key={item.id} className="deal-card">
             
-            <div className="deal-img">
+            <div className="deal-img" style={{ position: "relative" }}>
               <img src={item.image} alt={item.title} />
-              <div className="wishlist">♡</div>
+
+              {/* ❤️ WISHLIST */}
+              <div
+                className="wishlist"
+                onClick={() => addToWishlist(item)}
+                style={{ cursor: "pointer" }}
+              >
+                {wishlist.some((w: any) => w.id === item.id)
+                  ? "❤️"
+                  : "🤍"}
+              </div>
             </div>
 
             <div className="deal-content">
@@ -48,7 +60,6 @@ export default function Deals() {
               >
                 Add to Cart
               </button>
-
             </div>
           </div>
         ))}

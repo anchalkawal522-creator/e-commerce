@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import Footer from "./componets/Footer/page";
 import { CartProvider } from "./Context/cartContext"; 
 import { SearchProvider } from "./Context/searchContext";
-
+import { WishlistProvider } from "./Context/wishlistContext"
  export default function RootLayout({
   children,
 }: {
@@ -24,13 +24,16 @@ import { SearchProvider } from "./Context/searchContext";
     
       <CartProvider>
       <SearchProvider>
+        <WishlistProvider>
       {!hideLayout && <Header />}
       {!hideLayout && <Navbar />}
 
       {children}
 
       {!hideLayout && <Footer />}
+      </WishlistProvider>
       </SearchProvider>
+
       </CartProvider>
 
   </body>

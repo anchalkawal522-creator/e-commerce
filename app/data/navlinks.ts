@@ -10,7 +10,7 @@ export const navLinks = [
   },
   {
     name: "What’s New",
-    href: "/new",
+    href: "../componets/Best",
   },
   {
     name: "Delivery",

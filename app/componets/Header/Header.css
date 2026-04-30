@@ -1,12 +1,12 @@
 .top-header {
-  background-color: #0a5c36;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 40px;
-  font-size: 14px;
-  align-items: center;
-}
+    color: #fff;
+    background-color: #0a5c36;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    font-size: 14px;
+    display: flex;}
+
 
 /* LEFT */
 .top-header .left {

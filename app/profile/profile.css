@@ -1,73 +1,114 @@
 .profile-container {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    max-width: 924px;
+    margin: 34px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 11px 3px seagreen;
 }
 
-body.min-h-full.flex.flex-col {
-    background: linear-gradient(45deg, green, #09521787);
-}
-
+/* CARD */
 .profile-card {
-  width: 350px;
-  padding: 30px;
-  border-radius: 16px;
-  background: #ffffff;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
 
+/* TITLE */
 .profile-title {
-  margin-bottom: 20px;
   font-size: 24px;
-  color: #333;
+  margin-bottom: 20px;
 }
 
+/* IMAGE */
 .profile-image-wrapper {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .profile-image {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #ff7a00;
+  border: 3px solid #eee;
 }
 
+/* INPUT FILE */
+.profile-image-wrapper input {
+  margin-top: 10px;
+}
+
+/* INFO */
 .profile-info {
-  margin-bottom: 20px;
+  margin-top: 15px;
 }
 
 .profile-field {
   margin: 8px 0;
-  font-size: 16px;
-  color: #555;
+  font-size: 15px;
 }
 
-.logout-btn {
+/* INPUTS (EDIT MODE) */
+.profile-info input {
   width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  background: green;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
+  margin: 8px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* BUTTON */
+.logout-btn {
+    color: #fff;
+    cursor: pointer;
+    background: #eb0a0ae3;
+    border: none;
+    border-radius: 6px;
+    margin-top: 15px;
+    padding: 10px 18px;
+    transition: all .3s;
+    margin-left: 20px;
 }
 
 .logout-btn:hover {
-  background: green;
+  background: #333;
 }
 
+/* LOADING */
 .loading {
   text-align: center;
   margin-top: 50px;
-  font-size: 18px;
 }
 
+/* NO USER */
 .no-user {
-  color: #999;
+  text-align: center;
+  color: red;
+}
+
+/* ❤️ WISHLIST SECTION */
+.profile-container h2 {
+  margin-top: 30px;
+}
+
+/* GRID */
+.profile-container > div:last-child div {
+  transition: 0.3s;
+}
+
+.profile-container > div:last-child div:hover {
+  transform: translateY(-5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 10px;
+  }
+
+  .profile-card {
+    padding: 15px;
+  }
 }

@@ -8,7 +8,7 @@
     box-shadow: 0 0 60px 10px green;
 }
 body.min-h-full.flex.flex-col {
-    background: linear-gradient(45deg, green, #09521787);
+
     padding:67px;
 }
 .register p {

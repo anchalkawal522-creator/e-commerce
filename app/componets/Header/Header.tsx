@@ -14,7 +14,7 @@ export default function Header() {
       <div className="center">
         <span>Get 50% Off on Selected Items</span>
         <span className="divider">|</span>
-        <a href="#">Shop Now</a>
+        <a href="./componets/Best">Shop Now</a>
       </div>
 
       <div className="right">

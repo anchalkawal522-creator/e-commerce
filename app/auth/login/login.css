@@ -8,7 +8,7 @@
     box-shadow: 0 0 60px 10px green;
 }
 body.min-h-full.flex.flex-col {
-    background: green;
+
     padding:67px;
 }
 .login p {

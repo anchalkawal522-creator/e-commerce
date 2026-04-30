@@ -19,7 +19,6 @@ export default function Navbar() {
   const router = useRouter();
 
 
-  // ✅ Highlight Function (FINAL FIXED)
   const highlightText = (text: string, search: string) => {
     if (!search) return text;
 
@@ -46,13 +45,12 @@ export default function Navbar() {
     );
   };
 
-  // ✅ Login check
   useEffect(() => {
     const loginStatus = localStorage.getItem("isLoggedIn");
     setIsLoggedIn(loginStatus === "true");
   }, []);
 
-  // ✅ Live search suggestions
+
   useEffect(() => {
     if (!search.trim()) {
       setSuggestions([]);
@@ -70,21 +68,21 @@ export default function Navbar() {
   setSearch(item.title);
   setSuggestions([]);
 
-  // ✅ Redirect with query
+
   router.push(`/product/${item.id}?add=true`);
 };
 
   return (
     <nav className="navbar">
 
-      {/* LOGO */}
+
       <div className="logo">
         <Link href="/">
           <Image src="/images/logo.svg" alt="logo" width={40} height={40} />
         </Link>
       </div>
 
-      {/* MENU */}
+   
       <div className="menu">
         {navLinks.map((item, index) => (
           <Link key={index} href={item.href} className="menu-item">
@@ -94,7 +92,7 @@ export default function Navbar() {
         ))}
       </div>
 
-      {/* SEARCH */}
+
       <div className="search-box">
         <input
           type="text"
@@ -104,7 +102,7 @@ export default function Navbar() {
         />
         <CiSearch className="search-icon" />
 
-        {/* ✅ DROPDOWN */}
+      
         {suggestions.length > 0 && (
           <div
             style={{

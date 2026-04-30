@@ -4,18 +4,20 @@ import { pop } from "../../data/pop";
 import "./pop.css";
 import { useRouter } from "next/navigation";
 import { useCart } from "../../Context/cartContext";
+import { useWishlist } from "../../Context/wishlistContext"; // ✅ added
 
 export default function Pop() {
-      const { addToCart } = useCart();
-   const router= useRouter();
-  
-    const handleAdd = (item: any) => {
-      addToCart(item);
-          setTimeout(() => {
-        router.push(`cart`);
-      }, 200);
-  
-    };
+  const { addToCart } = useCart();
+  const { addToWishlist, wishlist, removeFromWishlist } = useWishlist(); // ✅ added
+  const router = useRouter();
+
+  const handleAdd = (item: any) => {
+    addToCart(item);
+    setTimeout(() => {
+      router.push(`cart`);
+    }, 200);
+  };
+
   return (
     <div className="pop">
       <h2 className="pop-title">Weekly Popular Products</h2>
@@ -25,9 +27,26 @@ export default function Pop() {
           <div key={item.id} className="pop-card">
             
             {/* IMAGE */}
-            <div className="pop-img">
+            <div className="pop-img" style={{ position: "relative" }}>
               <img src={item.image} alt={item.title} />
-              <div className="wishlist">♡</div>
+
+              {/* ❤️ WISHLIST */}
+              <div
+                className="wishlist"
+                onClick={() => {
+                  const exists = wishlist.some((w: any) => w.id === item.id);
+                  if (exists) {
+                    removeFromWishlist(item.id);
+                  } else {
+                    addToWishlist(item);
+                  }
+                }}
+                style={{ cursor: "pointer" }}
+              >
+                {wishlist.some((w: any) => w.id === item.id)
+                  ? "❤️"
+                  : "🤍"}
+              </div>
             </div>
 
             {/* CONTENT */}
@@ -39,7 +58,6 @@ export default function Pop() {
 
               <p className="pop-desc">{item.desc}</p>
 
-              {/* RATING */}
               <div className="rating">
                 {"★".repeat(item.rating)}
                 <span> ({item.reviews})</span>
