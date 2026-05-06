@@ -93,7 +93,7 @@ export const productList = [
     id: 11,
     title: "sneakers",
     price: 39,
-    category: "Sneakers",
+    category: "sneakers",
     image: "/images/sneakers.png",
     rating: 5,
     reviewCount: 121,

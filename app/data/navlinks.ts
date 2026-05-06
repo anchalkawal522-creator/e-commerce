@@ -14,6 +14,10 @@ export const navLinks = [
   },
   {
     name: "Delivery",
-    href: "/delivery",
+    href: "/Delivery",
+  },
+   {
+    name: "Orders",
+    href: "/orders",
   },
 ];

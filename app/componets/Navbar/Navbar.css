@@ -82,3 +82,53 @@
 .icon-link svg {
   font-size: 18px;
 }
+
+
+@media (max-width:1100px) {
+  .menu {
+    flex-wrap: wrap;
+    margin: 0px 23px;
+}
+.actions {
+    flex-wrap: wrap;
+    margin: 0px 11px;
+}
+  
+}
+@media (max-width: 880px){
+  .navbar {
+    flex-wrap: wrap;
+}
+.logo {
+    margin-bottom: 20px;
+}
+}
+@media (max-width:650px) {
+  .menu {
+    width: 100%;
+    margin: 20px 0px;
+}
+.search-box input {
+    width: 100%;
+}
+.actions {
+    width: 100%;
+    margin: 20px 0px;
+} 
+}
+@media (max-width: 430px) {
+
+  .menu-item {
+    gap: 57px;
+    font-size: 20px;
+} 
+}
+@media (max-width:300px) {
+       .menu-item {
+        gap: 30px;
+        font-size: 25px;
+    }
+    .actions {
+   font-size: 25px;
+}
+}

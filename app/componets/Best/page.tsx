@@ -4,7 +4,7 @@ import { useState } from "react";
 import { categoriesList } from "../../data/categoriesList";
 import { productList } from "../../data/productlist";
 import ProductCard from "../productCard";
-import { useWishlist } from "../../Context/wishlistContext"; // ✅ import
+import { useWishlist } from "../../Context/wishlistContext";
 import "./best.css";
 
 type Product = {
@@ -20,7 +20,7 @@ type Product = {
 export default function Page() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
-  const { addToWishlist, wishlist } = useWishlist(); // ✅ use context
+  const { addToWishlist, wishlist } = useWishlist();
 
   const filteredProducts: Product[] =
     selectedCategory === "All"
@@ -60,7 +60,7 @@ export default function Page() {
               key={productItem.id}
               style={{ position: "relative" }}
             >
-              {/* ❤️ WISHLIST ICON */}
+              {/* WISHLIST ICON */}
               <div
                 onClick={() => {
                   if (!isWishlisted) {

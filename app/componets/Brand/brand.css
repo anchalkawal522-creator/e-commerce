@@ -58,3 +58,22 @@
   font-size: 14px;
   color: #555;
 }
+@media (max-width:992px) {
+  .brand-card {
+    width: 100%;
+}
+}
+@media (max-width:768px) {
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+    margin: auto;
+}
+
+}
+@media (max-width:575px) {
+  .brands-grid {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+}

@@ -90,3 +90,16 @@
   background: transparent;
   cursor: pointer;
 }
+@media (max-width:768px) {
+  .deals-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+}
+  
+}
+@media (max-width:575px) {
+  .deals-grid {
+    grid-template-columns: repeat(1, 1fr);
+}
+  
+}

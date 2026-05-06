@@ -8,11 +8,11 @@
 
 /* CARD */
 .profile-card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  text-align: center;
+    text-align: left;
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px #00000014;
 }
 
 /* TITLE */
@@ -102,13 +102,3 @@
   transform: translateY(-5px);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .profile-container {
-    padding: 10px;
-  }
-
-  .profile-card {
-    padding: 15px;
-  }
-}

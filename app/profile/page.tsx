@@ -165,14 +165,14 @@ export default function Profile() {
         {wishlist.length === 0 ? (
           <p>No items in wishlist</p>
         ) : (
-          <div
+          <div className="items"
             style={{
-              display: "grid",
-              gridTemplateColumns:
-                "repeat(auto-fill, minmax(180px, 1fr))",
+              display: "flex",
+              
               gap: "20px",
               marginTop: "15px"
             }}
+            
           >
             {wishlist.map((item) => (
               <div
@@ -223,10 +223,9 @@ export default function Profile() {
 ) : (
   <div
     style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
+      display: "flex",
       gap: "15px",
-      marginTop: "15px"
+      marginTop: "20px"
     }}
   >
     {cart.map((item: any) => (

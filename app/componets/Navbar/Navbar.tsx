@@ -87,7 +87,7 @@ export default function Navbar() {
         {navLinks.map((item, index) => (
           <Link key={index} href={item.href} className="menu-item">
             {item.name}
-            {item.hasDropdown && <span className="arrow">⌄</span>}
+            {item.hasDropdown && <span className="arrow"></span>}
           </Link>
         ))}
       </div>

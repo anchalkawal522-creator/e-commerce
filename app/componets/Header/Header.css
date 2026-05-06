@@ -37,3 +37,14 @@
   display: flex;
   gap: 20px;
 }
+@media (max-width: 768px){
+  .top-header {
+    flex-wrap: wrap;
+}
+.top-header .center {
+    margin: 10px 0px;
+    width :100%;
+    flex-wrap: wrap;
+}
+  
+}

@@ -10,6 +10,9 @@
   align-items: center;
   gap: 10px;
 }
+.footer-col {
+    width: 12%;
+}
 
 .logo-box img {
     object-fit: contain;
@@ -69,4 +72,45 @@ transition: all 0.6s ease;
 .footer-bottom p svg {
     height: 50px;
     width: 34px !important;
+}
+.flogo {
+    width: 50%;
+}
+@media (max-width:1200px) {
+    
+    .footer-brand {
+    flex-wrap: wrap;
+}
+.footer-bottom {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-col {
+    width: 27%;
+    margin-bottom: 47px;
+}
+}
+@media (max-width:700px) {
+
+    .flogo {
+    width: 74%;
+}
+.footer-col {
+    width: 35%;
+}
+
+}
+@media (max-width:650px) {
+    .footer-col {
+    width: 47%;
+}
+}
+@media (max-width:420px) {
+.footer-col {
+    width: 69%;
+}
+    .flogo {
+    width: 90%;
+}
+    
 }

@@ -56,3 +56,73 @@
   background: white;
   color: #0b4d3b;
 }
+@media (max-width:1250px) {
+  .offerban-card {
+    width: 390px;
+    height: 319px;
+    top: 20%;
+
+}
+
+}
+@media (max-width:950px) {
+  .offerban-card {
+    width: 373px;
+    height: 322px;
+    top: 10%;
+    right: 30%;
+    padding: 10px;
+}
+}
+@media (max-width:850px) {
+  .offerban-title {
+
+    font-size: 22px;
+}
+.offerban-card {
+    height: 256px;
+}
+.offerban-button {
+    padding: 5px 14px;
+  
+}
+   .offerban-bg {
+    height: 386px;
+}
+}
+@media (max-width:650px) {
+  
+  .offerban-card {
+    height: 250px;
+    width: 285px;
+}
+
+
+}
+@media (max-width:560px) {
+      .offerban-card {
+        width: 324px;
+        height: 236px;
+        top: 2%;
+    }
+ 
+}
+@media (max-width:570px) {
+      .offerban-card {
+        top: 17%;
+        right: 21%;
+    }
+  
+}
+@media (max-width:440px) {
+    .offerban-card {
+    right: 9%;}
+}
+@media (max-width:395px) {
+  .offerban-card {
+    right: 6%;
+    width: 221px;
+    height: 294px;
+}
+
+}

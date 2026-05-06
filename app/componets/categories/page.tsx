@@ -13,7 +13,7 @@ export default function Categories() {
           <div
             key={item.id}
             className="category-card"
-            style={{ background: item.color }}
+           
           >
             <img src={item.image} alt={item.title} />
             <h3>{item.title}</h3>

@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { useCart } from "../Context/cartContext";
+import { useRouter } from "next/navigation";
 import "./checkout.css";
 
 export default function CheckoutPage() {
-  const { cart, removeFromCart } = useCart();
+  const { cart, placeOrder } = useCart();s
+  const router = useRouter();
 
   const [form, setForm] = useState({
     name: "",
@@ -19,7 +21,6 @@ export default function CheckoutPage() {
     0
   );
 
-  // ✅ proper typing
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -37,21 +38,22 @@ export default function CheckoutPage() {
       return;
     }
 
-    alert("✅ Order Placed Successfully!");
+    
+    placeOrder();
 
-    // ✅ clear cart properly
-    cart.forEach((item) => removeFromCart(item.id));
+    alert(" Order Placed Successfully!");
 
-    // clear form
     setForm({
       name: "",
       email: "",
       phone: "",
       address: "",
     });
+
+
+    router.push("/orders");
   };
 
-  // ✅ EMPTY CART UI
   if (cart.length === 0) {
     return (
       <div className="checkout-page">
@@ -65,7 +67,7 @@ export default function CheckoutPage() {
     <div className="checkout-page">
       <h2>Checkout</h2>
 
-      {/* 🧾 CART SUMMARY */}
+      {/* CART SUMMARY */}
       <div className="checkout-cart">
         {cart.map((item) => (
           <div key={item.id} className="checkout-item">
@@ -79,7 +81,7 @@ export default function CheckoutPage() {
         <h3>Total: ${total}</h3>
       </div>
 
-      {/* 📋 FORM */}
+      {/* FORM */}
       <div className="checkout-form">
         <input
           type="text"

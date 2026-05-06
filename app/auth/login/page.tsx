@@ -33,7 +33,7 @@ function Login() {
       // ✅ store user again (safe)
       localStorage.setItem("user", JSON.stringify(storedUser));
 
-      // ✅ better navigation
+
       router.replace("/profile");
     } else {
       alert("Invalid email or password");

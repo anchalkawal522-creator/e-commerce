@@ -3,12 +3,12 @@
 import { products } from "../../data/deals";
 import "./deals.css";
 import { useCart } from "../../Context/cartContext";
-import { useWishlist } from "../../Context/wishlistContext"; // ✅ added
+import { useWishlist } from "../../Context/wishlistContext"; 
 import { useRouter } from "next/navigation";
 
 export default function Deals() {
   const { addToCart } = useCart();
-  const { addToWishlist, wishlist } = useWishlist(); // ✅ added
+  const { addToWishlist, wishlist } = useWishlist(); 
   const router = useRouter();
 
   const handleAdd = (item: any) => {
